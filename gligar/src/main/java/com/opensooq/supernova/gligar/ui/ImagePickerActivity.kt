@@ -164,18 +164,20 @@ internal class ImagePickerActivity : AppCompatActivity(), LoadMoreListener.OnLoa
             return
         }
 
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkPermission(android.Manifest.permission.CAMERA)) {
-                cameraPermissionGranted()
-            } else {
-                requestPermission(
-                    arrayOf(android.Manifest.permission.CAMERA),
-                    CAMERA_PERMISSION_REQUEST_CODE
-                )
-            }
-        } else {
-            cameraPermissionGranted()
-        }
+
+        cameraPermissionGranted()
+//        if (Build.VERSION.SDK_INT >= 23) {
+//            if (checkPermission(android.Manifest.permission.CAMERA)) {
+//                cameraPermissionGranted()
+//            } else {
+//                requestPermission(
+//                    arrayOf(android.Manifest.permission.CAMERA),
+//                    CAMERA_PERMISSION_REQUEST_CODE
+//                )
+//            }
+//        } else {
+//            cameraPermissionGranted()
+//        }
     }
 
     private fun checkStoragePermission() {
