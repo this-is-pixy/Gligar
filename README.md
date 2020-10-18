@@ -32,11 +32,20 @@ Demo
 # Download
 
 This library is available in **jCenter** which is the default Maven repository used in Android Studio. You can also import this library from source as a module.
+
+```groovy
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
  
 ```groovy
 dependencies {
     // other dependencies here
-    implementation 'com.opensooq.supernova:gligar:1.1.0'
+	implementation 'com.github.this-is-pixy:Gligar:Tag'
 }
 ```
 
